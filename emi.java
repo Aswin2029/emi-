@@ -3,7 +3,7 @@ public class emi
 {
 	public static void main(String[] args)
 	{
-		double am,dp,a,it,mo,em,A,yr,gt;
+		double am,dp,a,it,mo,em,A,gt,yr,itr;
 		Scanner input =new Scanner(System.in);
 		System.out.println("AMOUNT             ");
 		am = input.nextDouble();
@@ -11,16 +11,20 @@ public class emi
 		dp = input.nextDouble();
 		System.out.println("TOTAL                 ");
 		a = am - dp;
+		System.out.println("YEAR             ");
+		yr = input.nextDouble();
 		System.out.println("INTEREST             ");
-		it = a * 4/100*3;
+		it = input.nextDouble();
+		System.out.println("TOTAL INTEREST             ");
+		itr = a*it/100*yr;
 		System.out.println("MONTH                ");
-		mo = input.nextDouble();
+		mo = (yr*12)-1;
 		System.out.println("INTEREST MONTH        "+it);
-		A = it/mo;
+		A = itr/mo;
 		System.out.println("EMI                  ");
-		em = (a+it)/mo;
+		em = (a+itr)/mo;
 		System.out.println("grand total          ");
-		gt = a + it ;
+		gt = a + itr ;
 		
 		
 		
@@ -32,13 +36,13 @@ public class emi
 		  System.out.println("====================================");
 		  System.out.println("DOWN PAYMENT         "+dp);
 		  System.out.println("TOTAL                "+a);
+		  System.out.println("YEAR                 "+yr);
 		  System.out.println("INTEREST             "+it);
+		  System.out.println("TOTAL INTEREST       "+itr);
 		  System.out.println("MONTH                "+mo);
-		  System.out.println("INTEREST MONTH       "+A);
+		  System.out.println("MONTHLY INTEREST     "+A);
 		  System.out.println("====================================");
 		  System.out.println("EMI                  "+em);
-		  System.out.println("====================================");
-		  System.out.println("GRAND TOTAL          "+gt);
 		  System.out.println("====================================");
 		  System.out.println("====================================");
 		  
